@@ -2,7 +2,7 @@ defmodule ListFilter do
   def call(list), do: filter_list(list)
 
   defp filter_list(list) do
-    Enum.count(filter_numbers(list), fn number -> rem(number, 2) == 1 end)
+    Enum.count(filter_numbers(list), fn number -> rem(number, 2) != 0 end)
   end
 
   defp filter_numbers(list) do
